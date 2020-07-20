@@ -1,0 +1,33 @@
+version: "3.8"
+services: 
+  swagger-editor:
+    image: swaggerapi/swagger-editor
+    container_name: "swagger-editor"
+    ports: 
+      - "9001:8080"
+  swagger-ui:
+    image: swaggerapi/swagger-ui
+    container_name: "swagger-ui"
+    ports:
+      - "9002:8080"
+    volumes:
+      - ./swagger/openapi.yaml:/usr/share/nginx/html/openapi.yaml
+    environment:
+      API_URL: openapi.yaml
+  swagger-api:
+    image: danielgtaylor/apisprout
+    container_name: "swagger-api"
+    ports:
+      - "9003:8000"
+    volumes:
+      - ./swagger/openapi.yaml:/openapi.yaml
+    command: /openapi.yaml
+  redoc:
+    image: redocly/redoc
+    container_name: "redoc"
+    ports:
+      - "9004:80"
+    volumes:
+      - ./swagger/openapi.yaml:/usr/share/nginx/html/openapi.yaml
+    environment:
+      SPEC_URL: openapi.yaml
