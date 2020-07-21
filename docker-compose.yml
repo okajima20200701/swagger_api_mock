@@ -11,23 +11,23 @@ services:
     ports:
       - "9002:8080"
     volumes:
-      - ./swagger/openapi.yaml:/usr/share/nginx/html/openapi.yaml
+      - ./swagger/openapi.yml:/usr/share/nginx/html/openapi.yml
     environment:
-      API_URL: openapi.yaml
+      API_URL: openapi.yml
   swagger-api:
     image: danielgtaylor/apisprout
     container_name: "swagger-api"
     ports:
       - "9003:8000"
     volumes:
-      - ./swagger/openapi.yaml:/openapi.yaml
-    command: /openapi.yaml
+      - ./swagger/openapi.yml:/openapi.yml
+    command: /openapi.yml
   redoc:
     image: redocly/redoc
     container_name: "redoc"
     ports:
       - "9004:80"
     volumes:
-      - ./swagger/openapi.yaml:/usr/share/nginx/html/openapi.yaml
+      - ./swagger/openapi.yml:/usr/share/nginx/html/openapi.yml
     environment:
-      SPEC_URL: openapi.yaml
+      SPEC_URL: openapi.yml
