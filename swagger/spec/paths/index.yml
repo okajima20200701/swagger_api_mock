@@ -1,0 +1,28 @@
+"/pet":
+  $ref: "./pet/pet.yml"
+"/pet/findByStatus":
+  $ref: "./pet/find_by_status.yml"
+"/pet/findByTags":
+  $ref: "./pet/find_by_tags.yml"
+"/pet/{petId}":
+  $ref: "./pet/find_by_id.yml"
+"/pet/{petId}/uploadImage":
+  $ref: "./pet/upload_image.yml"
+"/store/inventory":
+  $ref: "./store/inventory.yml"
+"/store/order":
+  $ref: "./store/order.yml"
+"/store/order/{orderId}":
+  $ref: "./store/order_by_id.yml"
+"/user":
+  $ref: "./user/create_user.yml"
+"/user/createWithArray":
+  $ref: "./user/create_with_array.yml"
+"/user/createWithList":
+  $ref: "./user/create_with_list.yml"
+"/user/login":
+  $ref: "./user/login.yml"
+"/user/logout":
+  $ref: "./user/logout.yml"
+"/user/{username}":
+  $ref: "./user/user.yml"

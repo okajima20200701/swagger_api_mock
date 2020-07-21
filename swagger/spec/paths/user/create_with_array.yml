@@ -1,0 +1,11 @@
+post:
+  tags:
+    - user
+  summary: Creates list of users with given input array
+  description: ""
+  operationId: createUsersWithArrayInput
+  requestBody:
+    $ref: "#/components/requestBodies/UserArray"
+  responses:
+    default:
+      description: successful operation

@@ -1,0 +1,12 @@
+Order:
+  $ref: "./order.yml"
+Category:
+  $ref: "./category.yml"
+User:
+  $ref: "./user.yml"
+Tag:
+  $ref: "./tag.yml"
+Pet:
+  $ref: "./pet.yml"
+ApiResponse:
+  $ref: "./api_response.yml"
