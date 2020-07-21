@@ -59,5 +59,19 @@
     ]
     }%
 
-## 今後
-- `openapi.yaml`を分割して運用していく仕組みを検討
+## openapi.ymlのマージについて
+- [swagger-merger](https://www.npmjs.com/package/swagger-merger)を利用
+- 必要なもの
+  - node.jsとnpm(Win/Mac各環境に合わせて適当にインストールしておいてください)
+  - swagger-merger(ローカルインストール)
+
+## マージ実行方法
+    ./node_modules/.bin/swagger-merger -i swagger/spec/index.yml -o swagger/openapi.yml
+
+## 環境
+    okazaki@okazakinoiMac swagger_api_mock % node -v
+    v14.5.0
+    okazaki@okazakinoiMac swagger_api_mock % npm -v
+    6.14.5
+
+
