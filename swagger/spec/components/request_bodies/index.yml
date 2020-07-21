@@ -1,0 +1,4 @@
+UserArray:
+  $ref: "./user_array.yml"
+Pet:
+  $ref: "./pet.yml"
